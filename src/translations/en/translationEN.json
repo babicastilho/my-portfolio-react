@@ -1,0 +1,10 @@
+{
+    "language": "en",
+    "menu": {
+        "home": "Home",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "hero_message": "This is the Hero section",
+    "about_message": "This is the About page"
+}

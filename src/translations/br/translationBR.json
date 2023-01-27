@@ -1,0 +1,13 @@
+{
+    "language": "br",
+    
+    "menu": {
+        "home": "Início",
+        "about": "Sobre",
+        "contact": "Contato"
+    },
+
+    "hero_message": "Esta é a sessão Hero",
+
+    "about_message": "Esta é a página sobre"
+}

@@ -1,13 +1,16 @@
 import React, { Component, } from 'react'
+import { useTranslation } from "react-i18next";
 
-export default class Hero extends Component {
-    render() {
-        return (
-            <>
-                <section className="hero content" id="hero">
-                    <p>This is the <strong>Hero</strong> section</p>
-                </section>
-            </>
-        )
-    }
+const Hero = () => {
+    // translate
+    const { t, i18n } = useTranslation(['main']);
+
+    return (
+        <>
+            <section className="hero content" id="hero">
+                <p>{t("hero_message", { ns: ['main'] })}</p>
+            </section>
+        </>
+    )
 }
+export default Hero;

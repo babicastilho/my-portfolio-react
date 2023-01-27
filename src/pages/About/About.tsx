@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
+import { useTranslation } from "react-i18next";
 
-export default class Aboutpage extends Component {
-    render() {
+export default function Aboutpage () {
+    // translate
+    const { t, i18n } = useTranslation(['main']);
         return (
             <>
                 <section className="about content" id="about">
-                    <p>This is the <strong>About</strong> page</p>
+                    <p>{t("about_message", { ns: ['main'] })}</p>
                 </section>
             </>
         )
-    }
+    
 }
