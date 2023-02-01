@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { Nav, Navbar, Container } from 'react-bootstrap';
 import { useTranslation } from "react-i18next";
 
-import DropdownLanguage from '../DropdownLanguage/DropdownLanguage';
-import ProgressBar from '../ProgressBar/ProgressBar';
-import { Switch } from '../Switch/Switch';
+import DropdownLanguage from '../../Utils/DropdownLanguage/DropdownLanguage';
+import ProgressBar from '../../Utils/ProgressBar/ProgressBar';
+import ThemeMode from '../../Utils/ThemeMode/ThemeMode';
 
 import './_header.scss';
 
@@ -17,9 +17,9 @@ const Header = () => {
     const [headerClassName, setHeaderClassName] = useState("");
 
     const handleScroll = (headerClassName: string) => {
-        if (headerClassName !== "onScroll" && window.pageYOffset >= 150) {
+        if (headerClassName !== "onScroll" && window.pageYOffset >= 100) {
             setHeaderClassName("onScroll");
-        } else if (headerClassName === "onScroll" && window.pageYOffset < 150) {
+        } else if (headerClassName === "onScroll" && window.pageYOffset < 100) {
             setHeaderClassName("");
         }
     };
@@ -33,34 +33,30 @@ const Header = () => {
             <header className={headerClassName + ' fixed-top'}>
                 <Navbar
                     id="navbar-menu"
-                    className="shrink"
+                    className="nav"
                     bg="transparent"
                     expand="md"
                 >
                     <Container>
                         <Navbar.Brand as={Link} to="/">React-Bootstrap</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                        <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="me-auto">
+                        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
+                            <Nav className="mx-auto">
                                 <Nav.Link as={Link} to="/">  {t("menu.home", { ns: ['main'] })} </Nav.Link>
                                 <Nav.Link as={Link} to="/about"> {t("menu.about", { ns: ['main'] })} </Nav.Link>
                                 <Nav.Link as={Link} to="/contact"> {t("menu.contact", { ns: ['main'] })} </Nav.Link>
+                                <Navbar.Text><ThemeMode /></Navbar.Text>
                             </Nav>
                             <DropdownLanguage />
-                            <Switch />
+                            
                         </Navbar.Collapse>
-                        
-                    </Container>
-                    
-            
-        
+                    </Container>       
                 </Navbar>
                 <ProgressBar
                     backgroundColor="transparent"
                     barColor="#ffc448"
                     height="2px"
                 />
-                
             </header>
         </>
     )

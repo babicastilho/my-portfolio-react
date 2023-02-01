@@ -5,7 +5,6 @@ import App from './App';
 
 import "./i18n";
 
-import "bootstrap/dist/css/bootstrap-reboot.min.css";
 import './index.scss';
 
 const root = ReactDOM.createRoot(

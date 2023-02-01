@@ -7,7 +7,7 @@ import Contact from './Contact/Contact';
 
 import './homepage.scss';
 
-export default class Homepage extends Component { 
+export default class Home extends Component { 
     render() {
         return (
             <>

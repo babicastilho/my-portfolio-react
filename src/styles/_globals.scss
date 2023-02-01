@@ -1,0 +1,77 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px; 
+}
+
+
+::selection {
+    background-color: #e45447;
+    color: #fff;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color:  var(--background);
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+#root,
+.App {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main {
+    padding: 150px 0;
+}
+
+.content {
+    min-height: 700px;
+    background-color: var(--background);
+    transition: all 0.3s ease-in-out;
+}
+
+.fadeIn {
+    animation: 0.5s fadeIn ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fadeOut {
+    animation: 0.5s fadeOut ease;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+a.toggleButtom {
+    cursor: pointer;
+}
+

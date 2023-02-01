@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, Navigate, useLocation } from "react-router-dom";
-import ScrollToTop from './components/scroll-top/ScrollToTop';
+import ScrollToTop from './Utils/scroll-top/ScrollToTop';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
-import Homepage from './homepage/Homepage';
-import Aboutpage from './pages/About/About';
-import Contactpage from './pages/Contact/Contact';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Contact from './pages/Contact/Contact';
 
 
 export default function App() {
+    useScrollToTop();
     return (
         <>
             <section className="App">
@@ -23,6 +24,14 @@ export default function App() {
             </section>
         </>
     )
+}
+
+function useScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 }
 
 
@@ -47,9 +56,9 @@ function Content() {
             }}
         >
             <Routes location={displayLocation}>
-                <Route path="/" element={<Homepage />} />
-                <Route path="/about" element={<Aboutpage />} />
-                <Route path="/contact" element={<Contactpage />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
                 <Route path='*' element={<Navigate to='/' />} />
             </Routes>
         </div>

@@ -1,0 +1,6 @@
+@mixin spread-map($map: ()) {
+    // each item in color map
+  @each $name, $color in $map {
+    --#{$name}: #{$color};
+  }
+}
