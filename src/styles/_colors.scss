@@ -1,19 +1,30 @@
+@function color($color) {
+    @return map-get($colors, $color);
+}
+
 $light-mode: (
     background: #f5f5f5,
-    text-color: #202020,
-    text-accent: #3D3D3D,
-    accent: #ffc448,
-    accent-hover: #cea315, 
+    navbar: #f5f5f5,
+    text-color: #3D3D3D,
+    text-hover: #202020,
     border: #1f1e1e,
+    theme-mode-color: #6a5acd,
+    
 );
 
 $dark-mode: (
     background: #171923,
+    navbar: #27272A,
     text-color: #a7a4a4,
-    text-accent: #c5cddb,
-    accent: #6a5acd,
-    accent-hover: #5b4cbe, 
+    text-hover: #c5cddb,
     border: #696969,
-   
+    theme-mode-color: #ffc448,
+
 );
 
+$theme-colors: (
+    primary-color: #6a5acd,
+    primary-color-hover: #5b4cbe,
+    accent-color: #ffc448,
+    accent-color-hover: #cea315,
+);

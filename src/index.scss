@@ -1,8 +1,10 @@
 @use './styles/colors';
+@use './styles/animations';
 
 @import 'bootstrap/dist/css/bootstrap-reboot.min.css';
 @import 'bootstrap/scss/bootstrap';
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); // navbar
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800'); // body
 
 @import './styles/globals';
@@ -10,6 +12,7 @@
 
 :root {
     @include spread-map(colors.$light-mode);
+    @include spread-map(colors.$theme-colors);
     --icon-select-url: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='%236244c5'><polygon points='0,0 100,0 50,50'/></svg>");
 }
 

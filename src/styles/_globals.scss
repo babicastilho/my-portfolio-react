@@ -10,6 +10,11 @@
     background-color: #e45447;
     color: #fff;
 }
+body {
+    overflow: hidden;
+    overflow-y: auto;
+    scroll-behavior: auto !important;
+}
 
 html,
 body {
@@ -20,6 +25,7 @@ body {
     background-color:  var(--background);
     color: var(--text-color);
     transition: all 0.3s ease-in-out;
+
 }
 
 #root,
@@ -30,7 +36,11 @@ body {
 }
 
 main {
-    padding: 150px 0;
+    padding: 0
+}
+
+.page {
+    margin-top: 150px;
 }
 
 .content {
@@ -73,5 +83,11 @@ main {
 
 a.toggleButtom {
     cursor: pointer;
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        color: var(--theme-mode-color);
+    }
 }
 

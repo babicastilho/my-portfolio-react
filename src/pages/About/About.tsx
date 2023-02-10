@@ -6,7 +6,7 @@ export default function Aboutpage () {
     const { t, i18n } = useTranslation(['main']);
         return (
             <>
-                <section className="about content" id="about">
+                <section className="about content page" id="about">
                     <p>{t("about_message", { ns: ['main'] })}</p>
                 </section>
             </>

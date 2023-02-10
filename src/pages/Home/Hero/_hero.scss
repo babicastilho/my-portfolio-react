@@ -1,0 +1,45 @@
+// Layouts Variation
+$smlg-device: 'only screen and (max-width: 1199px)';
+$extra-device: 'only screen and (min-width: 1600px) and (max-width: 1919px)';
+$laptop-device: 'only screen and (min-width: 1200px) and (max-width: 1599px)';
+$lg-layout: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md-layout:'only screen and (min-width: 768px) and (max-width: 991px)';
+$sm-layout:'only screen and (max-width: 767px)';
+$large-mobile: 'only screen and (max-width: 575px)';
+$small-mobile: 'only screen and (max-width: 479px)';
+
+@import '../../../styles/animations';
+
+.hero {
+
+    position: relative;
+    padding: 150px 0 0;
+    z-index: 1; 
+
+    &::before {
+        position: absolute;
+        content: "";
+        background-image: url(../../../assets/img/shapes/08.png);
+        left: -20%;
+        top: calc(-55% + 150px);
+        
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        background-image: url(../../../assets/img/shapes/03.png);
+        right: 0;
+        top: calc(-50% + 150px);
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        z-index: -1;
+        pointer-events: none;
+    }
+}

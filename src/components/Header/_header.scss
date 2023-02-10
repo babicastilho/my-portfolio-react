@@ -1,17 +1,97 @@
 header {
-    background-color: var(--background);
     padding: 20px 0;
     transition: all 0.3s ease-in-out;
-    
+
     & .nav,
     & .navbar-text {
+
+        font-family: 'Montserrat', sans-serif;
+        color: var(--text-color);
+
         & a {
-        color: var(--text-color); }
+            color: var(--text-color);
+        }
+
+        & .navbar-nav {
+
+            text-transform: lowercase;
+
+            & a.nav-link {
+
+                display: inline-block;
+                position: relative;
+                
+
+
+                @media only screen and (min-width: 768px) {
+                    border-radius: 0.25rem;
+                    padding: 0.5rem 0.75rem;
+                    margin: 0 1rem;
+
+                    &::before {
+                        transition: 300ms;
+                        height: 3px;
+                        content: "";
+                        position: absolute;
+                        background-color: var(--accent-color);
+                      }
+                }
+
+                &:hover {
+                    color: var(--text-color);
+                }
+            }
+
+            & .active {
+                color: var(--primary-color);
+                font-weight: bold;
+
+                &:hover {
+                    color: var(--primary-color) !important;
+                }
+            }
+        }
+    }
+
+    & .small-screen {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (max-width: 767px) {
+
+            margin-top: 0.5em;
+            border-top: 1px solid var(--bs-navbar-color);
+        }
+
+        & span.text {
+            @media only screen and (min-width: 768px) {
+                display: none;
+            }
+        }
     }
 }
 
+.show {
+    position: relative;
+    margin-top: 10px;
+    padding: 0 10px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        margin: 0 -10px;
+        background: var(--background);
+        opacity: 0.9;
+        border-radius: var(--bs-navbar-toggler-border-radius);
+        z-index: -1;
+    }
+}
 
 .onScroll {
+    background-color: var(--navbar);
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
     padding: 0 !important;
     font-size: 1rem;
@@ -20,10 +100,21 @@ header {
 select.language {
     width: auto !important;
     background-color: var(--background);
-    border: 1px solid var(--background);
+    border: none;
     color: var(--text-color);
     background: var(--icon-select-url) no-repeat;
     background-size: 16px;
     background-position: calc(100% - 10px) 15px;
-    transition: all 0.3s ease-in-out;  
+    transition: all 0.3s ease-in-out;
 }
+
+.nav-link-ltr::before {
+    margin: -0.5rem -0.75rem;
+    width: 0%;
+    bottom: 5px;
+  }
+  
+  .nav-link-ltr:hover::before {
+    width: 100%;
+  }
+  
