@@ -4,7 +4,11 @@
     "menu": {
         "home": "Início",
         "about": "Sobre",
-        "contact": "Contato"
+        "portfolio": "Portfolio",
+        "contact": "Contato",
+        "change-color": "mudar cor",
+        "language": "idioma"
+
     },
 
     "hero_message": "Esta é a sessão Hero",

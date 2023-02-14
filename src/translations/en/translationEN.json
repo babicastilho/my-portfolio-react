@@ -3,7 +3,10 @@
     "menu": {
         "home": "Home",
         "about": "About",
-        "contact": "Contact"
+        "portfolio": "Portfolio",
+        "contact": "Contact",
+        "change-color": "change color",
+        "language": "language"
     },
     "hero_message": "This is the Hero section",
     "about_message": "This is the About page"

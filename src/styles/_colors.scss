@@ -9,6 +9,7 @@ $light-mode: (
     text-hover: #202020,
     border: #1f1e1e,
     theme-mode-color: #6a5acd,
+    skillBaseBgColor: #ababab,
     
 );
 
@@ -19,12 +20,14 @@ $dark-mode: (
     text-hover: #c5cddb,
     border: #696969,
     theme-mode-color: #ffc448,
+    skillBaseBgColor: #e0e0de,
 
 );
 
 $theme-colors: (
     primary-color: #6a5acd,
     primary-color-hover: #5b4cbe,
+    secondary-color: "#6a1b9a",
     accent-color: #ffc448,
     accent-color-hover: #cea315,
 );

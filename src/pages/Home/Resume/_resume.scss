@@ -1,0 +1,43 @@
+.skillBar {
+    display: flex;
+    align-items: center;
+
+    & .typeSkill {
+
+        font-size: 13px;
+        font-weight: bold;
+
+        @media only screen and (min-width: 1200px) {
+            font-size: 15px;
+        }
+    }
+
+    & .containerBar {
+        height: 20px;
+        background: var(--skillBaseBgColor);
+        border-radius: 50px;
+        width: 100%;
+        margin: 1em 0px;
+        overflow: hidden;
+
+        & .fillerBar {
+            height: 20px;
+            background: var(--secondary-color);
+            transition: all 0.3s ease-in-out 0s;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+
+            & .labelBar {
+                padding: 5px;
+                color: white;
+                font-weight: bold;
+                font-size: 13px;
+
+                @media only screen and (min-width: 1200px) {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

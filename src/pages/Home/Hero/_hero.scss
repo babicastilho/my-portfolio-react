@@ -13,8 +13,13 @@ $small-mobile: 'only screen and (max-width: 479px)';
 .hero {
 
     position: relative;
-    padding: 150px 0 0;
-    z-index: 1; 
+    z-index: 1;
+    padding: 100px 0 0;
+    
+
+    @media only screen and (min-width: 1200px) {
+        padding: 150px 0 0 !important;
+    }
 
     &::before {
         position: absolute;
@@ -22,7 +27,6 @@ $small-mobile: 'only screen and (max-width: 479px)';
         background-image: url(../../../assets/img/shapes/08.png);
         left: -20%;
         top: calc(-55% + 150px);
-        
         height: 100%;
         width: 100%;
         background-repeat: no-repeat;
@@ -41,5 +45,180 @@ $small-mobile: 'only screen and (max-width: 479px)';
         background-repeat: no-repeat;
         z-index: -1;
         pointer-events: none;
+    }
+
+    & .hello-animated {
+        display: inline-block;
+        animation: mymove 10s infinite;
+    }
+}
+
+@keyframes mymove {
+    50% {
+        transform: rotate(90deg);
+    }
+}
+
+.background {
+
+    @media only screen and (max-width: 767px) {
+        display: none;
+    }
+
+    & .top {
+        position: relative;
+
+        & .one {
+            width: 100px;
+            height: 100px;
+            background-color: var(--primary-color-hover);
+            opacity: 0.5;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 150px;
+            z-index: -1;
+        }
+
+        & .two {
+            width: 150px;
+            height: 150px;
+            background-color: var(--primary-color-hover);
+            opacity: 0.7;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 10px;
+            left: 200px;
+            z-index: -1;
+        }
+
+        & .three {
+            width: 120px;
+            height: 120px;
+            background-color: var(--primary-color-hover);
+            opacity: 0.2;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 120px;
+            left: 300px;
+            z-index: -1;
+        }
+
+        & .six {
+            width: 175px;
+            height: 175px;
+            background-color: var(--primary-color-hover);
+            opacity: 0.6;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 250px;
+            right: 200px;
+            z-index: -1;
+        }
+
+        & .seven {
+            width: 250px;
+            height: 250px;
+            background-color: var(--primary-color-hover);
+            opacity: 0.3;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 450px;
+            right: 0;
+            z-index: -1;
+        }
+
+        & .eight {
+            width: 75px;
+            height: 75px;
+            background-color: var(--primary-color-hover);
+            opacity: 0.4;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 350px;
+            z-index: -1;
+        }
+
+        & .nine {
+            width: 45px;
+            height: 45px;
+            background-color: var(--primary-color-hover);
+            opacity: 0.7;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 450px;
+            z-index: -1;
+        }
+    }
+
+
+
+    & .four {
+        width: 80px;
+        height: 80px;
+        background-color: var(--primary-color-hover);
+        opacity: 0.4;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+
+    & .five {
+        width: 50px;
+        height: 50px;
+        background-color: var(--primary-color-hover);
+        opacity: 0.9;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 200px;
+        right: 0;
+        z-index: -1;
+    }
+
+
+    & .ten {
+        width: 150px;
+        height: 150px;
+        background-color: var(--primary-color-hover);
+        opacity: 0.6;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+
+.job {
+    display: inline-block;
+    position: relative;
+
+    font-size: 16px;
+    padding-left: 60px;
+
+    @media only screen and (min-width: 992px) {
+        font-size: 20px;
+        padding-left: 87px;
+    }
+
+    @media only screen and (min-width: 1600px) {
+        font-size: 24px;
+        padding-left: 97px;
+    }
+
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 80px;
+        height: 1px;
+        background-color: var(--text-color);
+        left: 0;
+        top: 13px;
     }
 }

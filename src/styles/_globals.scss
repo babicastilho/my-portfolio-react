@@ -36,7 +36,7 @@ body {
 }
 
 main {
-    padding: 0
+    padding: 100px 0;  
 }
 
 .page {
@@ -44,7 +44,6 @@ main {
 }
 
 .content {
-    min-height: 700px;
     background-color: var(--background);
     transition: all 0.3s ease-in-out;
 }

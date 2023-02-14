@@ -95,11 +95,12 @@ const ProgressBar: React.FC<IScrollProgressProps> = (
     const barStyle = {
         height,
         background: barColor,
+        //background: "var(--theme-mode-color)",
         width: scrolled
     };
     return (
-        <div className="progress-bar" style={containerStyle}>
-            <div style={barStyle} />
+        <div className="progress-bar" style={ containerStyle }>
+            <div style={ barStyle } />
         </div>
     );
 };
