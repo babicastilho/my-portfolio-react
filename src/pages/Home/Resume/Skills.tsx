@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SkillBar from '../../../Utils/SkillBar/SkillBar';
 
-import './_resume.scss';
+
 
 const skillsMap = [
     { type: "HTML", level: 99 },

@@ -14,11 +14,15 @@ $small-mobile: 'only screen and (max-width: 479px)';
 
     position: relative;
     z-index: 1;
-    padding: 100px 0 0;
-    
+    padding: 50px 0 0;
+    margin-bottom: 5rem !important;
+
+    @media only screen and (min-width: 767px) {
+        padding: 100px 0 0;
+    }
 
     @media only screen and (min-width: 1200px) {
-        padding: 150px 0 0 !important;
+        padding: 150px 0 0;
     }
 
     &::before {
@@ -47,10 +51,85 @@ $small-mobile: 'only screen and (max-width: 479px)';
         pointer-events: none;
     }
 
-    & .hello-animated {
-        display: inline-block;
-        animation: mymove 10s infinite;
+    .welcomeHero {
+
+        margin-bottom: 3rem;
+        text-align: center;
+
+        @media only screen and (min-width: 576px) {
+            margin-bottom: 2rem;
+        }
+
+        @media only screen and (min-width: 992px) {
+            margin-bottom: 1rem;
+            text-align: left;
+        }
+
+        & .top {
+            margin-bottom: - 3vw;
+            display: block;
+
+            @media only screen and (min-width: 768px) {
+                margin-bottom: -1.5vw;
+            }
+
+            & .hello-animated {
+                display: inline-block;
+                animation: mymove 10s infinite;
+            }
+
+            & .hello {
+                margin-left: 5px;
+                font-family: 'Montserrat', sans-serif;
+                text-transform: lowercase;
+                letter-spacing: -1px;
+            }
+        }
+
+        & h1 {
+            margin-bottom: 0 !important;
+            font-family: "Cookie", serif;
+            font-size: calc(3rem + 4vw);
+            letter-spacing: -3px;
+        }
+
+        & .job {
+            display: block;
+            margin-top: calc(-0.5rem - 2vh);
+            font-family: 'Montserrat', sans-serif;
+            text-transform: lowercase;
+            letter-spacing: -1px;
+
+        }
     }
+
+    .socialNetworks {
+        & ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 80px;
+                height: 1px;
+                background-color: var(--text-color);
+                left: 0;
+                top: 0;
+            }
+
+            & li {
+                margin: 1em 1em 0;
+
+                &:first-child {
+                    margin-left: 0 !important;
+                }
+            }
+        }
+    }
+
 }
 
 @keyframes mymove {
@@ -191,34 +270,5 @@ $small-mobile: 'only screen and (max-width: 479px)';
         bottom: 0;
         right: 0;
         z-index: -1;
-    }
-}
-
-.job {
-    display: inline-block;
-    position: relative;
-
-    font-size: 16px;
-    padding-left: 60px;
-
-    @media only screen and (min-width: 992px) {
-        font-size: 20px;
-        padding-left: 87px;
-    }
-
-    @media only screen and (min-width: 1600px) {
-        font-size: 24px;
-        padding-left: 97px;
-    }
-
-
-    &::before {
-        position: absolute;
-        content: "";
-        width: 80px;
-        height: 1px;
-        background-color: var(--text-color);
-        left: 0;
-        top: 13px;
     }
 }

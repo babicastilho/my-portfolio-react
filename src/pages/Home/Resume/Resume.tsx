@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
 import { Tab, Tabs, } from 'react-bootstrap';
-import { useTranslation } from "react-i18next";
 
 import Skills from './Skills';
 import Education from './Education';
 import Experience from './Experience';
 
-export default function Resume() {
-    // translate
-    const { t, i18n } = useTranslation(['main']);
+import './_resume.scss';
 
+export default function Resume() {
     return (
         <>
             <section className="skills content" id="skills">
@@ -22,7 +20,7 @@ export default function Resume() {
                         <Tabs
                             defaultActiveKey="mySkills"
                             id="fill-tab-example"
-                            className="mb-3"
+                            className="mb-5 mx-3"
                             justify
                         >
                             <Tab eventKey="mySkills" title="Skills">

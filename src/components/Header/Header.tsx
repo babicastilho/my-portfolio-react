@@ -42,8 +42,10 @@ const Header = () => {
                     <Container>
                         <Navbar.Brand as={Link} to="/">
                             <div className="d-flex flex-column align-items-center">
-                                <h1 className="title">Bárbara Castilho</h1>
-                                <span className="subtitle">front-end developer</span>
+                                <h1 className="title">
+                                    Bárbara Castilho
+                                </h1>
+                                <span className="subtitle">front-end web developer</span>
                             </div>
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
