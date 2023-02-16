@@ -6,7 +6,7 @@ import { StickyList } from '../../../components/StickyList/StickyList';
 let experienceList = [
     {
         id: 1,
-        title: 'Senior Web Developer',
+        title: 'Lorem Ipsum Dolor Sit Amet',
         start: '2004',
         end: '2007',
         place: 'Cambridge University',
@@ -18,7 +18,7 @@ let experienceList = [
         title: 'Mid-Level Web Developer',
         start: '2004',
         end: '2007',
-        place: 'Cambridge University',
+        place: 'Lorem Ipsum Dolor Sit Amet',
         details:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.',
     },
@@ -27,7 +27,7 @@ let experienceList = [
         title: 'Junoir Web Developer',
         start: '2004',
         end: '2007',
-        place: 'Cambridge University',
+        place: 'Lorem Ipsum Dolor Sit Amet',
         details:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.',
     },

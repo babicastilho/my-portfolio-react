@@ -40,13 +40,13 @@ const Hero = () => {
                             <div className="welcomeHero">
                                 <div className="top">
                                     <span className="hello-animated">👋</span>
-                                    <span className="hello">hello, I'm</span>
+                                    <span className="hello"> <p>{t("hero.hello", { ns: ['main'] })}</p></span>
                                 </div>
                                 <h1>Bárbara Castilho</h1>
                                 <span className="job">Front-end web developer</span>
                             </div>
                             <p>
-                                Based in Fundão, Portugal. I'm passionate about User Experience, Responsive Devlopment, Accessibility and dedicated to my work.
+                            {t("hero.description", { ns: ['main'] })}
                             </p>
                             <div className="socialNetworks d-flex align-items-center">
                                 <ul className="d-flex">
@@ -54,7 +54,7 @@ const Hero = () => {
                                         <a
                                             target="_blank"
                                             rel="noreferrer"
-                                            href='https://www.kindacode.com'>
+                                            href='https://www.linkedin.com/in/barbara-castilho-520800151/'>
                                             <BsLinkedin />
                                         </a>
                                     </li>
@@ -62,7 +62,7 @@ const Hero = () => {
                                         <a
                                             target="_blank"
                                             rel="noreferrer"
-                                            href='https://www.kindacode.com'>
+                                            href='https://github.com/babicastilho'>
                                             <BsGithub />
                                         </a>
                                     </li>

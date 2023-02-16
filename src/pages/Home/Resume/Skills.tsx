@@ -4,16 +4,17 @@ import SkillBar from '../../../Utils/SkillBar/SkillBar';
 
 
 const skillsMap = [
-    { type: "HTML", level: 99 },
-    { type: "CSS", level: 98 },
-    { type: "JavaScript", level: 87 },
-    { type: "jQuery", level: 92 },
-    { type: "BootStrap", level: 90 },
-    { type: "Angular.js", level: 16 },
-    { type: "React.js", level: 25 },
-    { type: "PHP", level: 36 },
-    { type: "Photoshop", level: 100 },
-    { type: "Figma", level: 11 }
+    { type: "HTML", level: 95 },
+    { type: "CSS", level: 90 },
+    { type: "SASS/SCSS", level: 65 },
+    { type: "BootStrap", level: 70 },
+    { type: "JavaScript", level: 70 },
+    { type: "TypeScript", level: 50 },
+    { type: "React.js", level: 45 },
+    { type: "Angular.js", level: 15 },
+    { type: "PHP", level: 60 },
+    { type: "Photoshop", level: 40 },
+    { type: "Figma", level: 55 }
 ];
 
 export default class Skill extends Component {

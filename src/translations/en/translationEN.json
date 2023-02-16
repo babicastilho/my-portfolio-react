@@ -8,6 +8,22 @@
         "change-color": "change color",
         "language": "language"
     },
-    "hero_message": "This is the Hero section",
-    "about_message": "This is the About page"
+
+    "hero": {
+        "hello": "hello, I'm",
+        "description": "I'm passionate about User Experience, Responsive Devlopment, Accessibility and dedicated to my work. Based in Fundão, Portugal."
+    },
+
+    "about": {
+        "title": "About me",
+        "description": "Hi! My name is Bárbara Castilho. I'm a Front-end web developer passionate and dedicated about web development and the creativity that comes out of it, interested in continuous self-developing, looking forward to improve my skills and expanding my knowledge."
+    },
+
+    "resume": {
+        "title": "My expert areas"
+    },
+    
+    "about_page": "About page available soon :)",
+    "portfolio_page": "Portfolio page available soon :)",
+    "contact_page": "Contact page available soon :)"
 }

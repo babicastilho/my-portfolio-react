@@ -9,7 +9,7 @@ export default class Footer extends Component {
             <>
                 <footer className="footer flex-shrink-0 bg-dark mt-auto py-3">
                     <Container>
-                        <span className="text-muted">&copy; {year} barbaracastilho.com -  All rigths reserved.</span>
+                        <span className="text-muted text-center">&copy; 2022 - {year} - made with ♡ and ReactJS by barbaracastilho.com -  All rigths reserved.</span>
                     </Container>
                 </footer>
             </>

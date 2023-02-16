@@ -21,10 +21,10 @@ export default function About() {
                         </div>
 
                         <div className="col-md-6 d-flex flex-column justify-content-center">
-                            <h1>About Me</h1>
-                            <p>Hi! My name is Bárbara Castilho. I'm a Front-end web developer passionate  and dedicated about web development and the creativity that comes out of it, interested in continuous self-developing, looking forward to improve my skills and expanding my knowledge. </p>
+                            <h1>{t("about.title", { ns: ['main'] })}</h1>
+                            <p>{t("about.description", { ns: ['main'] })}</p>
                             <div className="text-center my-5">
-                                <Button variant="primary">Download CV</Button>{' '}
+                                <Button variant="primary">Download CV - soon</Button>{' '}
                             </div>
                         </div>
                     </div>

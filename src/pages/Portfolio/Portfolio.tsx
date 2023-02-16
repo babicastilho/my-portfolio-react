@@ -1,13 +1,19 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { useTranslation } from "react-i18next";
 
-export default class Portfoliotpage extends Component {
-    render() {
-        return (
-            <>
-                <section className="portfolio content page" id="portfolio">
-                    <p>This is the <strong>portfolio</strong> page</p>
-                </section>
-            </>
-        )
-    }
+import { Container, } from 'react-bootstrap';
+
+export default function Portfoliopage() {
+    // translate
+    const { t, i18n } = useTranslation(['main']);
+    return (
+        <>
+            <section className="portfolio content page" id="portfolio">
+                <Container>
+                    <p>{t("portfolio_page", { ns: ['main'] })}</p>
+                </Container>
+            </section>
+        </>
+    )
+
 }

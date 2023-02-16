@@ -7,7 +7,7 @@ let educationList = [
         title: 'Enginering Degree',
         start: '2004',
         end: '2007',
-        place: 'Cambridge University',
+        place: 'Lorem Ipsum Dolor Sit Amet',
         details:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.',
     },
@@ -16,7 +16,7 @@ let educationList = [
         title: 'Master Degree',
         start: '2004',
         end: '2007',
-        place: 'Cambridge University',
+        place: 'Lorem Ipsum Dolor Sit Amet',
         details:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.',
     },
@@ -25,7 +25,7 @@ let educationList = [
         title: 'Bachlor Degree',
         start: '2004',
         end: '2007',
-        place: 'Cambridge University',
+        place: 'Lorem Ipsum Dolor Sit Amet',
         details:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quo repudiandae.',
     },

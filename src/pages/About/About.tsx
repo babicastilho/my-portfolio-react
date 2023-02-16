@@ -1,15 +1,19 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { useTranslation } from "react-i18next";
 
-export default function Aboutpage () {
+import { Container, } from 'react-bootstrap';
+
+export default function Aboutpage() {
     // translate
     const { t, i18n } = useTranslation(['main']);
-        return (
-            <>
-                <section className="about content page" id="about">
-                    <p>{t("about_message", { ns: ['main'] })}</p>
-                </section>
-            </>
-        )
-    
+    return (
+        <>
+            <section className="about content page" id="about">
+                <Container>
+                    <p>{t("about_page", { ns: ['main'] })}</p>
+                </Container>
+            </section>
+        </>
+    )
+
 }

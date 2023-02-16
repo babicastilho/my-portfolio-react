@@ -11,7 +11,21 @@
 
     },
 
-    "hero_message": "Esta é a sessão Hero",
+    "hero": {
+        "hello": "olá, eu sou",
+        "description": "Sou apaixonado pela Experiência do Utilizador (UX), Desenvolvimento Responsivo, Acessibilidade e dedicada ao meu trabalho. Moradora da cidade de Fundão, Portugal."
+    },
 
-    "about_message": "Esta é a página sobre"
+    "about": {
+        "title": "Sobre mim",
+        "description": "Olá! o meu nome é Bárbara Castilho. Sou uma desenvolvedora web de Front-end apaixonada e dedicada. Entusiasta da criatividade que resultante do trabalho. interessada em auto-desenvolvimento contínuo para melhorar as minhas competências e expandir os meus conhecimentos."
+    },
+
+    "resume": {
+        "title": "Áreas de conhecimento"
+    },
+
+    "about_message": "Página Sobre disponível em breve :)",
+    "portfolio_page": "Página Portfolio disponível em breve :)",
+    "contact_page": "Página Contato disponível em breve :)"
 }
