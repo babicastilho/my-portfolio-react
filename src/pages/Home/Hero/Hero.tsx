@@ -3,22 +3,29 @@ import { Container, } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 
-import { BsGithub, BsLinkedin, } from 'react-icons/bs';
+import { SideText } from "./SideText";
+import { BsGithub, BsLinkedin, BsChevronDoubleDown, } from 'react-icons/bs';
 
 
 import image from '../../../assets/img/logo.png';
 
 import './_hero.scss';
 
+const handleClickScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+    }
+};
+
 const Hero = () => {
     // translate
     const { t, i18n } = useTranslation(['main']);
 
-
-
     return (
         <>
             <section className="hero" id="hero">
+                <SideText left="" right="- scroll down -" />
                 <div className="background">
                     <div className="top">
                         <div className="one"></div>
@@ -46,7 +53,7 @@ const Hero = () => {
                                 <span className="job">Front-end web developer</span>
                             </div>
                             <p>
-                            {t("hero.description", { ns: ['main'] })}
+                                {t("hero.description", { ns: ['main'] })}
                             </p>
                             <div className="socialNetworks d-flex align-items-center">
                                 <ul className="d-flex">
@@ -75,6 +82,9 @@ const Hero = () => {
                         </div>
 
                     </div>
+                    <i onClick={() => handleClickScroll("about")} className="scroll-down">
+                        <BsChevronDoubleDown />
+                    </i>
                 </div>
 
             </section>

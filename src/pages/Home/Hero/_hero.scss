@@ -14,15 +14,15 @@ $small-mobile: 'only screen and (max-width: 479px)';
 
     position: relative;
     z-index: 1;
-    padding: 50px 0 0;
+    padding: 20px 0 0;
     margin-bottom: 5rem !important;
 
-    @media only screen and (min-width: 767px) {
-        padding: 100px 0 0;
+    @media only screen and (min-width: 768px) {
+        padding: 60px 0 0;
     }
 
     @media only screen and (min-width: 1200px) {
-        padding: 150px 0 0;
+        padding: 100px 0 0;
     }
 
     &::before {
@@ -51,6 +51,18 @@ $small-mobile: 'only screen and (max-width: 479px)';
         pointer-events: none;
     }
 
+    & .img-fluid {
+        max-width: 70%;
+
+        @media only screen and (min-width: 768px) {
+            max-width: 50%;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            max-width: 100%;
+        }
+    }
+
     .welcomeHero {
 
         margin-bottom: 3rem;
@@ -66,20 +78,25 @@ $small-mobile: 'only screen and (max-width: 479px)';
         }
 
         & .top {
-            margin-bottom: - 3vw;
+            margin-bottom: calc(-1.5vw - 5vw);
             display: block;
 
+            @media only screen and (min-width: 576px) {
+                margin-bottom: calc(-1.5vw - 3vw);
+            }
+
             @media only screen and (min-width: 768px) {
-                margin-bottom: -1.5vw;
+                margin-bottom: calc(-1.5vw - 1vw);
             }
 
             & .hello-animated {
                 display: inline-block;
-                animation: mymove 10s infinite;
+                animation: helloMove 10s infinite;
             }
 
             & .hello {
                 margin-left: 5px;
+                display: inline-block;
                 font-family: 'Montserrat', sans-serif;
                 text-transform: lowercase;
                 letter-spacing: -1px;
@@ -130,9 +147,49 @@ $small-mobile: 'only screen and (max-width: 479px)';
         }
     }
 
+    .scroll-down {
+
+        margin: 0 auto;
+        font-size: 2em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        animation: scroll-down-arrow infinite ease 2s;
+        cursor: pointer;
+        padding: 20px;
+
+        @media only screen and (min-width: 768px) {
+            font-size: 3em;
+        }
+    }
+
+    .scroll-down:focus,
+    .scroll-down:hover {
+        text-shadow: 0px 0px 30px white, 0px 0px 30px white, 0px 0px 30px white, 0px 0px 10px #553300, 0px 0px 10px #553300;
+    }
+
+    @keyframes scroll-down-arrow {
+        0% {
+            transform: translateY(10px);
+        }
+
+        80% {
+            transform: translateY(0px);
+        }
+
+        90% {
+            transform: translateY(1px);
+        }
+
+        100% {
+            transform: translateY(9px);
+        }
+    }
+
 }
 
-@keyframes mymove {
+@keyframes helloMove {
     50% {
         transform: rotate(90deg);
     }

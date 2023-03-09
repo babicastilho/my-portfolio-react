@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import SkillBar from '../../../Utils/SkillBar/SkillBar';
 
 
-
 const skillsMap = [
     { type: "HTML", level: 95 },
     { type: "CSS", level: 90 },

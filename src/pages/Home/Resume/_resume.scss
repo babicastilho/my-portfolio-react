@@ -21,17 +21,6 @@
             font-weight: bold;
             position: relative;
 
-            @media only screen and (min-width: 1200px) {
-                &:before {
-                    position: absolute;
-                    content: "";
-                    width: 5em;
-                    height: 1px;
-                    background-color: var(--text-hover);
-                    top: 3em;
-                    left: 2em;
-                }
-            }
         }
     }
 }

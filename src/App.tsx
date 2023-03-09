@@ -7,7 +7,7 @@ import Footer from './components/Footer/Footer';
 
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
-import Portfolio from './pages/Portfolio/Portfolio';
+import { Portfolio } from './pages/Portfolio/Portfolio';
 import Contact from './pages/Contact/Contact';
 
 
@@ -56,10 +56,13 @@ function Content() {
                 }
             }}
         >
+            
+            
+
             <Routes location={displayLocation}>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/portfolio" element={<Portfolio standalone={true} />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path='*' element={<Navigate to='/' />} />
             </Routes>

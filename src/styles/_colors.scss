@@ -7,9 +7,11 @@ $light-mode: (
     navbar: #f5f5f5,
     text-color: #3D3D3D,
     text-hover: #202020,
+    text-accent: #fff,
     border: #1f1e1e,
     theme-mode-color: #6a5acd,
     skillBaseBgColor: #ababab,
+    overlay: #ffffffcc,
     
 );
 
@@ -18,9 +20,11 @@ $dark-mode: (
     navbar: #27272A,
     text-color: #a7a4a4,
     text-hover: #c5cddb,
+    text-accent: #000,
     border: #696969,
     theme-mode-color: #ffc448,
     skillBaseBgColor: #e0e0de,
+    overlay: #000000cc,
 
 );
 

@@ -18,7 +18,11 @@ header {
                 font-size: x-small;
                 text-transform: uppercase;
                 color: var(--text-hover);
-                letter-spacing: 2px;
+                letter-spacing: 1px;
+
+                @media only screen and (min-width: 992px){
+                    letter-spacing: 2px;
+                }
             }
 
         }

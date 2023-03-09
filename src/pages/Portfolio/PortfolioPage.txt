@@ -1,0 +1,21 @@
+import React, { Component } from 'react';
+import { useTranslation } from "react-i18next";
+
+import { Container, } from 'react-bootstrap';
+
+import { Portfolio } from "./Portfolio";
+
+export default function Portfoliopage() {
+    // translate
+    const { t, i18n } = useTranslation(['main']);
+    return (
+        <>
+            <section className="portfolio content" id="portfolio">
+                <Container>
+                    <Portfolio standalone={true} />
+                </Container>
+            </section>
+        </>
+    )
+
+}
