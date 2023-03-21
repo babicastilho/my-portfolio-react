@@ -2,7 +2,7 @@ import * as React from "react";
 import * as PropTypes from "prop-types";
 
 export type SkillBarProps = {
-    completed: string | number;
+    completed: string | number | undefined;
     type: string;
     ariaValuemin?: number;
     ariaValuemax?: number;

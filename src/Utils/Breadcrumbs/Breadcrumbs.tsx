@@ -30,5 +30,4 @@ const Breadcrumbs = () => {
         </Breadcrumb>
     );
 };
-
 export default Breadcrumbs;

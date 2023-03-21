@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from "react-router-dom";
-import { Container, } from 'react-bootstrap';
+export type Project = {
+    id: number;
+    slug: string;
+    title: string;
+    resume: string;
+    imageUrl: string;
+    description: string;
+    link: string;
+    github: string;
+    stack: string[];
+    filters: string[];
+};
 
-import Breadcrumbs from '../../Utils/Breadcrumbs/Breadcrumbs';
-
-import { useTranslation } from "react-i18next";
-
-import PortfolioItem, { PortfolioItemProps } from "./PortfolioItem";
-import { FilterItem } from "./FilterItem";
-
-import "./_portfolio.scss";
-
-export const data: PortfolioItemProps[] = [
+export const data: Project[] = [
     {
         id: 0,
+        slug: "lorem-ipsum-0",
         title: "Lorem ipsum dolor sit amet",
         resume: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
         imageUrl: "uoe_app.jpg",
@@ -25,6 +26,7 @@ export const data: PortfolioItemProps[] = [
     },
     {
         id: 1,
+        slug: "lorem-ipsum-1",
         title: "Lorem ipsum dolor sit amet",
         resume: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
         imageUrl: "uoe_app.jpg",
@@ -36,6 +38,7 @@ export const data: PortfolioItemProps[] = [
     },
     {
         id: 2,
+        slug: "lorem-ipsum-2",
         title: "Lorem ipsum dolor sit amet",
         resume: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
         imageUrl: "uoe_app.jpg",
@@ -47,6 +50,7 @@ export const data: PortfolioItemProps[] = [
     },
     {
         id: 3,
+        slug: "lorem-ipsum-3",
         title: "Lorem ipsum dolor sit amet",
         resume: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
         imageUrl: "uoe_app.jpg",
@@ -58,6 +62,7 @@ export const data: PortfolioItemProps[] = [
     },
     {
         id: 4,
+        slug: "lorem-ipsum-4",
         title: "Lorem ipsum dolor sit amet",
         resume: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
         imageUrl: "uoe_app.jpg",
@@ -69,6 +74,7 @@ export const data: PortfolioItemProps[] = [
     },
     {
         id: 5,
+        slug: "lorem-ipsum-5",
         title: "Lorem ipsum dolor sit amet",
         resume: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
         imageUrl: "uoe_app.jpg",
@@ -80,6 +86,7 @@ export const data: PortfolioItemProps[] = [
     },
     {
         id: 6,
+        slug: "lorem-ipsum-6",
         title: "Lorem ipsum dolor sit amet",
         resume: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
         imageUrl: "uoe_app.jpg",
@@ -91,6 +98,7 @@ export const data: PortfolioItemProps[] = [
     },
     {
         id: 7,
+        slug: "lorem-ipsum-7",
         title: "Lorem ipsum dolor sit amet",
         resume: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
         imageUrl: "uoe_app.jpg",
@@ -101,88 +109,3 @@ export const data: PortfolioItemProps[] = [
         filters: ["all", "other"],
     },
 ];
-
-interface PortfolioProps {
-    standalone: boolean;
-}
-
-export function Portfolio({ standalone }: PortfolioProps) {
-
-    return (
-        <section className="portfolio content my-5" id="portfolio">
-            
-            {standalone ? <Container><PortfolioContent standalone={true}/></Container>
-                : <PortfolioContent standalone={false}/>}
-        </section>
-        
-    );
-}
-
-interface ContentProps {
-    single: boolean;
-}
-export function PortfolioContent({ standalone }: PortfolioProps)  {
-    // translate
-    const { t, i18n } = useTranslation(['main']);
-
-    let filters: string[] = [
-        "all",
-        "web",
-        "mobile",
-        "desktop",
-        "game",
-        "data",
-        "other",
-    ];
-    const [currentFilter, setCurrentFilter] = useState("all");
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
-    return (
-
-        <div>
-            <h1>Portfolio</h1>
-            {standalone ? <Breadcrumbs /> : null}
-            {/* Filters - desktop only*/}
-            <div className="filters-container">
-                {filters.map((filter, index) => (
-                    <FilterItem
-                        key={index}
-                        title={filter}
-                        initialClicked={filter === "all" ? true : false}
-                        setCurrentFilter={setCurrentFilter}
-                        currentFilter={currentFilter}
-                    />
-                ))}
-            </div>
-
-            {/* Filtered Items */}
-            <div className="portfolio-items-container">
-
-                {data.map((item) => {
-                    if (item.filters.includes(currentFilter)) {
-                        return (
-                            <PortfolioItem
-                                key={item.id}
-                                id={item.id}
-                                title={item.title}
-                                resume={item.resume}
-                                imageUrl={item.imageUrl}
-                                description={item.description}
-                                link={item.link}
-                                github={item.github}
-                                stack={item.stack}
-                                filters={item.filters}
-                            />
-                        );
-                    } else {
-                        return null;
-                    }
-                })
-                }
-            </div>
-        </div>
-    );
-}

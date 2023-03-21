@@ -1,0 +1,31 @@
+ul.skillList {
+    display: grid;
+    row-gap: 20px;
+    list-style: none;
+    padding: 0;
+
+    grid-template-columns: repeat(3, 1fr);
+    @media screen and (min-width: 992px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    & li {
+        margin: 1em 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & .image {
+            position: relative;
+            border-radius: 50%;
+            padding: 24px;
+            margin-bottom: 4px;
+            cursor: pointer;          
+
+            & img {
+                width: 48px;
+                height: 48px;
+            }
+        }
+    }
+}

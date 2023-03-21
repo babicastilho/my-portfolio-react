@@ -54,7 +54,7 @@ const Header = () => {
                             <Nav className="mx-auto menu">
                                 <Nav.Link className="nav-link-ltr" as={NavLink} end to="/">  {t("menu.home", { ns: ['main'] })} </Nav.Link>
                                 <Nav.Link className="nav-link-ltr" as={NavLink} end to="/about"> {t("menu.about", { ns: ['main'] })} </Nav.Link>
-                                <Nav.Link className="nav-link-ltr" as={NavLink} end to="/portfolio"> {t("menu.portfolio", { ns: ['main'] })} </Nav.Link>
+                                <Nav.Link className="nav-link-ltr" as={NavLink} end to="/projects"> {t("menu.projects", { ns: ['main'] })} </Nav.Link>
                                 <Nav.Link className="nav-link-ltr" as={NavLink} end to="/contact"> {t("menu.contact", { ns: ['main'] })} </Nav.Link>
 
                             </Nav>

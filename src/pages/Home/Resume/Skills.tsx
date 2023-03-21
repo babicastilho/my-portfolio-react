@@ -1,33 +1,55 @@
-import React, { Component } from 'react';
+import skills, { Skill } from '../../../data/skills';
 import SkillBar from '../../../Utils/SkillBar/SkillBar';
+import SkillList from '../../../Utils/SkillList/SkillList';
 
 
-const skillsMap = [
-    { type: "HTML", level: 95 },
-    { type: "CSS", level: 90 },
-    { type: "SASS/SCSS", level: 65 },
-    { type: "BootStrap", level: 70 },
-    { type: "JavaScript", level: 70 },
-    { type: "TypeScript", level: 50 },
-    { type: "React.js", level: 45 },
-    { type: "Angular.js", level: 15 },
-    { type: "PHP", level: 60 },
-    { type: "Photoshop", level: 40 },
-    { type: "Figma", level: 55 }
-];
+export default function Skills() {
+    let skill: string = "list";
 
-export default class Skill extends Component {
-    render() {
-        return (
-            <>
-                {skillsMap.map((item, idx) => (
-                    <SkillBar
-                        key={idx}
-                        type={item.type}
-                        completed={item.level}
-                    />
-                ))}
-            </>
-        )
+    switch (skill) {
+        case "bar": {
+            return (
+                <>
+                    {skills.map((item, idx) => (
+                        <SkillBar
+                            key={idx}
+                            type={item.label}
+                            completed={item.level}
+                        />
+                    ))}
+                </>
+            )
+            break;
+        }
+        case "list": {
+            return (
+                <>
+                <p className="text-center" style={{fontWeight: 'bold' }}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <ul className="skillList">
+                    {skills.map((item, idx) => (
+                        <SkillList
+                            key = {idx}
+                            name = {item.name} 
+                            label = {item.label}
+                            color = {item.color} 
+                            category = {item.category}  
+                            icon = {item.icon}                         
+                        />
+                    ))}
+                    </ul>
+                </>
+            )
+            break;
+        }
+        default: {
+            return (
+                <>
+                    error
+                </>
+            )
+            break;
+        }
     }
 }

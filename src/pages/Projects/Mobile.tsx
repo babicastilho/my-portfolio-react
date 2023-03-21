@@ -1,18 +1,21 @@
 import { useNavigate } from "react-router-dom";
-import { data } from "./Portfolio";
-import PortfolioItem from "./PortfolioItem";
+import { data } from "../../data/projects";
+import ProjectsItem from "./Item";
 
-import "./Portfolio";
+import { BsChevronRight } from "react-icons/bs";
 
-export function PortfolioMobile() {
+import "./Projects";
+
+export function ProjectsMobile() {
 
     const navigate = useNavigate();
     const handleNavigate = (route: string) => navigate("/" + route);
     let items: any = [];
-    
+
     for (let i = 0; i < data.length; i++) {
         items.push({
             id: data[i].id,
+            slug: data[i].slug,
             title: data[i].title,
             resume: data[i].resume,
             imageUrl: data[i].imageUrl,
@@ -25,17 +28,16 @@ export function PortfolioMobile() {
     }
 
     return (
-        <section className="portfolio content my-5" id="portfolio">
-            <h1>
-                Portfolio
-            </h1>
+        <section className="projects content my-5" id="projects">
+            <h1>Projects</h1>
 
-            <div className="portfolio-items-container">
+            <div className="projects-items-container">
                 {items.slice(0, 3).map((item: any, index: number) => {
                     return (
-                        <PortfolioItem
+                        <ProjectsItem
                             key={index}
                             id={item.id}
+                            slug={item.slug}
                             title={item.title}
                             resume={item.resume}
                             imageUrl={item.imageUrl}
@@ -50,12 +52,12 @@ export function PortfolioMobile() {
             </div>
 
             <div
-                className="portfolio-preview-view-more"
+                className="projects-view-more"
                 onClick={() => {
-                    handleNavigate("portfolio");
+                    handleNavigate("projects");
                 }}
             >
-                View More <i className="fa-solid fa-chevron-right"></i>
+                View More <BsChevronRight />
             </div>
 
         </section>

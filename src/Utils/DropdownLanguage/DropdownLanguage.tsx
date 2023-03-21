@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import Dropdown from 'react-bootstrap/Dropdown';
 import { availableLanguages } from "../../i18n";
-
 
 import { Form } from 'react-bootstrap';
 
