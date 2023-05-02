@@ -25,6 +25,14 @@
         "title": "Áreas de conhecimento"
     },
 
+    "projects": {
+        "title": "Projetos"
+    },
+
+    "contact": {
+        "title": "Contato"
+    },
+
     "about_message": "Página Sobre disponível em breve :)",
     "portfolio_page": "Página Portfolio disponível em breve :)",
     "contact_page": "Página Contato disponível em breve :)"

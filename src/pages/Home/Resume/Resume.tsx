@@ -6,6 +6,8 @@ import Skills from './Skills';
 import Education from './Education';
 import Experience from './Experience';
 
+import SectionTitle from '../../../components/SectionTitle/SectionTitle';
+
 import './_resume.scss';
 
 export default function Resume() {
@@ -17,7 +19,8 @@ export default function Resume() {
             <section className="skills content" id="skills">
                 <div className="row my-5 gy-5">
                     <div className="col-md-4">
-                        <h1>{t("resume.title", { ns: ['main'] })}</h1>
+                    <SectionTitle>{t("resume.title", { ns: ['main'] })}</SectionTitle>
+                        
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa aliquam ea illo, dicta reprehenderit non aspernatur asperiores a distinctio porro inventore necessitatibus labore sapiente vitae similique delectus molestias facere velit?
                     </div>
                     <div className="col-md-8">

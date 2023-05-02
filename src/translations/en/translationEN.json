@@ -22,6 +22,14 @@
     "resume": {
         "title": "My expert areas"
     },
+
+    "projects": {
+        "title": "Projects"
+    },
+
+    "contact": {
+        "title": "Get in touch"
+    },
     
     "about_page": "About page available soon :)",
     "portfolio_page": "Portfolio page available soon :)",

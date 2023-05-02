@@ -7,7 +7,7 @@ import { SideText } from "./SideText";
 import { BsGithub, BsLinkedin, BsChevronDoubleDown, } from 'react-icons/bs';
 
 
-import image from '../../../assets/img/logo.png';
+import image from '../../../assets/img/home5.png';
 
 import './_hero.scss';
 
@@ -42,7 +42,7 @@ const Hero = () => {
                     <div className="ten"></div>
                 </div>
                 <div className="container col-xxl-10 px-4 pb-5">
-                    <div className="row flex-lg-row align-items-center g-5 mx-auto">
+                    <div className="row flex-lg-row align-items-center g-5 mx-auto mb-3">
                         <div className="col-lg-7">
                             <div className="welcomeHero">
                                 <div className="top">
@@ -78,7 +78,7 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className="col-12 col-sm-12 col-md-12 col-lg-5">
-                            <img src={image} className="d-block mx-auto img-fluid" alt="purple illustration" width="700" height="500" loading="lazy" />
+                            <img src={image} className="d-block mx-auto img-fluid" alt="purple illustration" loading="lazy" />
                         </div>
 
                     </div>

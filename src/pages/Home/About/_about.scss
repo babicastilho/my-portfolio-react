@@ -20,13 +20,40 @@
             color: var(--text-hover);
         }
 
-        & .photo {
-            max-width: 50% !important;
-            opacity: 0.75;
-            transition:  all 0.5s ease-in-out;
+        & .left {
 
-            &:hover {
-                opacity: 0.85;
+            @media screen and (min-width: 768px) {
+                padding-right: 3rem;
+            }
+            
+            & .photo {
+                max-width: 100% !important;
+                opacity: 0.75;
+                transition: all 0.5s ease-in-out;
+                border-radius: 1rem !important;
+
+                &:hover {
+                    opacity: 0.85;
+                }
+            }
+        }
+
+        .overview {
+            display: grid;
+            row-gap: 20px;
+            justify-items: center;
+            padding: 0;
+            margin: 36px 0 0;
+
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            @media screen and (min-width: 992px) {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                margin: 36px 0;
+            }
+
+            & p {
+                font-size: 14px !important;
             }
         }
     }

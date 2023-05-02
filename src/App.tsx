@@ -9,7 +9,7 @@ import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import { Projects } from './pages/Projects/Projects';
 import SinglePortfolio from './pages/Projects/Single';
-import Contact from './pages/Contact/Contact';
+import { Contact } from './pages/Contact/Contact';
 
 
 export default function App() {
@@ -63,7 +63,7 @@ function Content() {
                 <Route path="/about" element={<About />} />
                 <Route path="/projects" element={<Projects standalone={true} />} />
                 <Route path="/projects/:slug" element={<SinglePortfolio />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route path="/contact" element={<Contact standalone={true} />} />
                 <Route path='*' element={<Navigate to='/' />} />
             </Routes>
         </div>

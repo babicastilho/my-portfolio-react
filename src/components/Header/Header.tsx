@@ -28,6 +28,8 @@ const Header = () => {
     useEffect(() => {
         window.onscroll = () => handleScroll(headerClassName);
     }, [headerClassName]);
+    
+    const [expanded, setExpanded] = useState(false);
 
     return (
         <>
@@ -36,11 +38,11 @@ const Header = () => {
                     id="navbar-menu"
                     className="nav"
                     bg="transparent"
+                    collapseOnSelect 
                     expand="md"
-                    collapseOnSelect
                 >
                     <Container>
-                        <Navbar.Brand as={Link} to="/">
+                        <Navbar.Brand as={Link} to="/" >
                             <div className="d-flex flex-column align-items-center">
                                 <h1 className="title">
                                     Bárbara Castilho
@@ -52,10 +54,10 @@ const Header = () => {
                         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-center">
 
                             <Nav className="mx-auto menu">
-                                <Nav.Link className="nav-link-ltr" as={NavLink} end to="/">  {t("menu.home", { ns: ['main'] })} </Nav.Link>
-                                <Nav.Link className="nav-link-ltr" as={NavLink} end to="/about"> {t("menu.about", { ns: ['main'] })} </Nav.Link>
-                                <Nav.Link className="nav-link-ltr" as={NavLink} end to="/projects"> {t("menu.projects", { ns: ['main'] })} </Nav.Link>
-                                <Nav.Link className="nav-link-ltr" as={NavLink} end to="/contact"> {t("menu.contact", { ns: ['main'] })} </Nav.Link>
+                                <Nav.Link eventKey="1" className="nav-link-ltr" as={NavLink} end to="/">  {t("menu.home", { ns: ['main'] })} </Nav.Link>
+                                <Nav.Link eventKey="2" className="nav-link-ltr" as={NavLink} end to="/about"> {t("menu.about", { ns: ['main'] })} </Nav.Link>
+                                <Nav.Link eventKey="3" className="nav-link-ltr" as={NavLink} end to="/projects"> {t("menu.projects", { ns: ['main'] })} </Nav.Link>
+                                <Nav.Link eventKey="4" className="nav-link-ltr" as={NavLink} end to="/contact"> {t("menu.contact", { ns: ['main'] })} </Nav.Link>
 
                             </Nav>
                             <Nav className="small-screen">

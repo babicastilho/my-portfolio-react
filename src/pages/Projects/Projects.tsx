@@ -9,6 +9,7 @@ import { data } from '../../data/projects';
 import { FilterItem } from "./FilterItem";
 import ProjectsItem from "./Item";
 
+import SectionTitle from '../../components/SectionTitle/SectionTitle';
 import "./_projects.scss";
 
 
@@ -21,15 +22,15 @@ export function Projects({ standalone }: ProjectsProps) {
 
     return (
         <section className="projects content my-5" id="projects">
-            {standalone ? <Container><ProjectsContent standalone={true}/></Container>
-                : <ProjectsContent standalone={false}/>}
+            {standalone ? <Container><ProjectsContent standalone={true} /></Container>
+                : <ProjectsContent standalone={false} />}
         </section>
-        
+
     );
 }
 
 
-export function ProjectsContent({ standalone }: ProjectsProps)  {
+export function ProjectsContent({ standalone }: ProjectsProps) {
     // translate
     const { t, i18n } = useTranslation(['main']);
 
@@ -51,7 +52,7 @@ export function ProjectsContent({ standalone }: ProjectsProps)  {
     return (
 
         <div>
-            <h1>Projects</h1>
+            <SectionTitle>{t("projects.title", { ns: ['main'] })}</SectionTitle>
             {standalone ? <Breadcrumbs /> : null}
             {/* Filters - desktop only*/}
             <div className="filters-container">

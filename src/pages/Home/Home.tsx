@@ -6,7 +6,7 @@ import About from './About/About';
 import Skills from './Resume/Resume';
 import { Projects } from '../Projects/Projects';
 import { ProjectsMobile } from '../Projects/Mobile';
-import Contact from './Contact/Contact';
+import { Contact } from '../Contact/Contact';
 
 import './homepage.scss';
 
@@ -22,7 +22,7 @@ export default class Home extends Component {
                     <Container>
                         <Skills />
                         {window.innerWidth < 768 ? <ProjectsMobile /> : <Projects standalone={false} />}
-                        <Contact />
+                        <Contact standalone={false}/>
                     </Container>
                 </div>
             </>

@@ -34,6 +34,7 @@ import Logobulma from "./skill-bulma.svg";
 import Logophp from "./skill-php.svg";
 import Logomysql from "./skill-mysql.svg";
 import Logocpp from "./skill-cpp.svg";
+import Logoangular from "./skill-angular.svg";
 
 const Icon = {
   Logoandroidstd,
@@ -70,6 +71,7 @@ const Icon = {
   Logophp,
   Logomysql,
   Logocpp,
+  Logoangular,
 };
 
 export default Icon;

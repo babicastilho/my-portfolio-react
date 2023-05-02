@@ -5,6 +5,7 @@ ul.skillList {
     padding: 0;
 
     grid-template-columns: repeat(3, 1fr);
+
     @media screen and (min-width: 992px) {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -20,7 +21,7 @@ ul.skillList {
             border-radius: 50%;
             padding: 24px;
             margin-bottom: 4px;
-            cursor: pointer;          
+            cursor: pointer;
 
             & img {
                 width: 48px;
@@ -28,4 +29,12 @@ ul.skillList {
             }
         }
     }
+}
+
+.popover {
+    --bs-popover-border-color: var(--primary-color) !important;
+    --bs-popover-header-bg: var(--primary-color) !important;
+    --bs-popover-header-color: var(--text-hover) !important;
+    --bs-popover-bg: var(--background) !important;
+    --bs-popover-body-color: var(--text-color) !important;
 }

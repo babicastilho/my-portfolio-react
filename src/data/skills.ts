@@ -7,150 +7,168 @@ export type Skill = {
     category?: string;
     icon?: string;
     level?: string | number | undefined;
+    description: string;
 };
 
 const skills: Skill[] = [
     {
         name: "html",
-        label: "HTML",
+        label: "HTML5",
         color: "#e34f26",
-        category: "",
+        category: "Frontend",
         icon: Icons.Logohtml,
-        level: 95
-    },
+        level: 95,
+        description: "Semantics, a11y, knowledge of WCAG 2.0 and ARIA"
+    }, 
 
     {
         name: "css",
-        label: "CSS",
+        label: "CSS 3",
         color: "#0170ba",
-        category: "",
+        category: "Frontend",
         icon: Icons.Logocss,
-        level: 90
+        level: 90,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam tenetur quia hic sapiente, in molestias ea animi alias? Eius nisi voluptatum, eveniet eum totam excepturi praesentium earum dolores! Dolore."
     },
 
     {
         name: "sass",
         label: "SASS/SCSS",
         color: "#cd6799",
-        category: "",
+        category: "Others",
         icon: Icons.Logosass,
-        level: 65
+        level: 65,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam tenetur quia hic sapiente, in molestias ea animi alias? Eius nisi voluptatum, eveniet eum totam excepturi praesentium earum dolores! Dolore."
     },
 
     {
         name: "bootstrap",
         label: "BootStrap",
         color: "#563d7c",
-        category: "",
+        category: "Frontend",
         icon: Icons.Logobootstrap,
-        level: 70
+        level: 70,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam tenetur quia hic sapiente, in molestias ea animi alias? Eius nisi voluptatum, eveniet eum totam excepturi praesentium earum dolores! Dolore."
     },
 
     {
         name: "javascript",
         label: "JavaScript",
         color: "#ffc107",
-        category: "",
+        category: "Frontend",
         icon: Icons.Logojs,
-        level: 70
+        level: 70,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam tenetur quia hic sapiente, in molestias ea animi alias? Eius nisi voluptatum, eveniet eum totam excepturi praesentium earum dolores! Dolore."
     },
 
     {
         name: "typescript",
         label: "TypeScript",
         color: "#3178c6",
-        category: "",
+        category: "Others",
         icon: Icons.Logots,
-        level: 50
+        level: 50,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam tenetur quia hic sapiente, in molestias ea animi alias? Eius nisi voluptatum, eveniet eum totam excepturi praesentium earum dolores! Dolore."
     },
 
     {
         name: "jquery",
         label: "jQuery",
         color: "#0868ac",
-        category: "",
+        category: "Frontend",
         icon: Icons.Logojquery,
-        level: 40
+        level: 40,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam tenetur quia hic sapiente, in molestias ea animi alias? Eius nisi voluptatum, eveniet eum totam excepturi praesentium earum dolores! Dolore."
     },
 
     {
         name: "react",
         label: "React.js",
         color: "#00bcd4",
-        category: "",
+        category: "Frontend",
         icon: Icons.Logoreactjs,
-        level: 45
+        level: 45,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam tenetur quia hic sapiente, in molestias ea animi alias? Eius nisi voluptatum, eveniet eum totam excepturi praesentium earum dolores! Dolore."
     },
 
     {
         name: "angular",
         label: "Angular.js",
         color: "#eb3c00",
-        category: "",
-        level: 15
+        category: "Frontend",
+        icon: Icons.Logoangular,
+        level: 15,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam tenetur quia hic sapiente, in molestias ea animi alias? Eius nisi voluptatum, eveniet eum totam excepturi praesentium earum dolores! Dolore."
     },
 
     {
         name: "php",
         label: "PHP",
         color: "#0075b7",
-        category: "Back end",
+        category: "Backend",
         icon: Icons.Logophp,
-        level: 60
+        level: 60,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam tenetur quia hic sapiente, in molestias ea animi alias? Eius nisi voluptatum, eveniet eum totam excepturi praesentium earum dolores! Dolore."
     },
 
     {
         name: "photoshop",
         label: "Photoshop",
         color: "#7fbafb",
-        category: "",
+        category: "Tools",
         icon: Icons.Logophotoshop,
-        level: 40
+        level: 40,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam tenetur quia hic sapiente, in molestias ea animi alias? Eius nisi voluptatum, eveniet eum totam excepturi praesentium earum dolores! Dolore."
     },
 
     {
         name: "figma",
         label: "Figma",
         color: "#a259ff",
-        category: "",
+        category: "Tools",
         icon: Icons.Logofigma,
-        level: 55
+        level: 55,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam tenetur quia hic sapiente, in molestias ea animi alias? Eius nisi voluptatum, eveniet eum totam excepturi praesentium earum dolores! Dolore."
     },
 
     {
         name: "cpp",
         label: "C / C++",
         color: "#2684ff",
-        category: "",
+        category: "Others",
         icon: Icons.Logocpp,
-        level: 55
+        level: 55,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam tenetur quia hic sapiente, in molestias ea animi alias? Eius nisi voluptatum, eveniet eum totam excepturi praesentium earum dolores! Dolore."
     },
 
     {
         name: "mysql",
         label: "MySQL",
         color: "#2684ff",
-        category: "",
+        category: "Backend",
         icon: Icons.Logomysql,
-        level: 55
+        level: 55,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam tenetur quia hic sapiente, in molestias ea animi alias? Eius nisi voluptatum, eveniet eum totam excepturi praesentium earum dolores! Dolore."
     },
 
     {
         name: "git",
         label: "Git",
         color: "#f05133",
-        category: "",
+        category: "Tools",
         icon: Icons.Logogit,
-        level: 55
+        level: 55,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam tenetur quia hic sapiente, in molestias ea animi alias? Eius nisi voluptatum, eveniet eum totam excepturi praesentium earum dolores! Dolore."
     },
 
     {
         name: "github",
         label: "Github",
         color: "#000000",
-        category: "",
+        category: "Tools",
         icon: Icons.Logogithub,
-        level: 55
+        level: 55,
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quisquam tenetur quia hic sapiente, in molestias ea animi alias? Eius nisi voluptatum, eveniet eum totam excepturi praesentium earum dolores! Dolore."
     }
 ];
 
