@@ -10,8 +10,6 @@ import { Contact } from '../Contact/Contact';
 
 import './homepage.scss';
 
-let isMobile: boolean;
-
 export default class Home extends Component {
     render() {
         return (
